@@ -27,6 +27,12 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
 
+  <form action="adicionarCategoria.php" method="get">
+    <label for="categoria">Insira uma nova categoria: </label>
+    <input type="text" name="categoria" id="categoria">
+    <button type="submit">Cadastrar</button>
+  </form>
+
   <table>
     <thead>
       <tr>
