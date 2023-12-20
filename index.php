@@ -33,6 +33,8 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     <button type="submit">Cadastrar</button>
   </form>
 
+
+
   <table>
     <thead>
       <tr>
@@ -47,7 +49,8 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
           <td> <?= $dado['id']; ?> </td>
           <td> <?= $dado['descrição']; ?></td>
           <td>
-            [ Editar ] [ Excluir ]
+            [ Editar ]
+            <a href="excluirCategoria.php?id=<?= $dado['id']; ?>">[ Excluir ]</a>
           </td>
         </tr>
       <?php endforeach; ?>
