@@ -44,12 +44,12 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
       </tr>
     </thead>
     <tbody>
-      <?php foreach ($dados as $dado) :  ?>
+      <?php foreach ($dados as  $linha => $dado) :  ?>
         <tr>
-          <td> <?= $dado['id']; ?> </td>
+          <td> <?= $linha + 1; ?> </td>
           <td> <?= $dado['descrição']; ?></td>
           <td>
-            [ Editar ]
+            <a href="editarCategoria.php?id=<?= $dado['id']; ?>">[ Editar ]</a>
             <a href="excluirCategoria.php?id=<?= $dado['id']; ?>">[ Excluir ]</a>
           </td>
         </tr>
