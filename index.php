@@ -5,7 +5,9 @@ $sql = "SELECT * FROM categoria_despesa";
 $sql = $pdo->prepare($sql);
 $sql->execute();
 
+$quantidade = $sql->rowCount(); # Retorna a quantidade de categorias
 $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+
 
 ?>
 
@@ -32,6 +34,8 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     <input type="text" name="categoria" id="categoria">
     <button type="submit">Cadastrar</button>
   </form>
+
+  <p>Quantidade de Categorias: <strong><?= $quantidade ?></strong></p>
 
 
 

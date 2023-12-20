@@ -30,10 +30,11 @@ $descricao = $dado['descrição'];
 
 <body>
 
-  <form action="adicionarCategoria.php" method="get">
+  <form action="editarCategoriaConfirmar.php" method="get">
     <label for="categoria">Insira uma nova categoria: </label>
+    <input type="hidden" name="id_categoria" id="id_categoria" value="<?= $id ?>">
     <input type="text" name="categoria" id="categoria" value="<?= $descricao ?>">
-    <button type="submit">Cadastrar</button>
+    <button type="submit">Confirmar Edição</button>
   </form>
 
 </body>
