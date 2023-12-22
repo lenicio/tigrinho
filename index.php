@@ -37,8 +37,6 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 
   <p>Quantidade de Categorias: <strong><?= $quantidade ?></strong></p>
 
-
-
   <table>
     <thead>
       <tr>
